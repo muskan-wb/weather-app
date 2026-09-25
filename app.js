@@ -121,7 +121,7 @@ async function forecastWeather() {
 
    let city = searchCity.value;
 
-let URL = `/api/weather?city=${encodeURIComponent(city)}&type=current`;
+let URL = `/api/weather?city=${encodeURIComponent(city)}&type=forecast`;
     let response = await fetch(URL);
     let data = await response.json();
 
@@ -396,6 +396,6 @@ menuItems.forEach((item) => {
    
 });
 updateCityCard()
-searchCity.value = " New Delhi";
+searchCity.value = "New Delhi";
 searchWeather();
 
