@@ -24,8 +24,8 @@ module.exports = async function handler(req, res) {
         ",India&aqi=yes";
 
     if (type === "forecast") {
-        url += "&days=7";
-    }
+    url += "&days=3";
+}
 
     try {
 
