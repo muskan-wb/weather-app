@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header-title">
+            Weather
+        </div>
+
+       
+        <div class="top-navbar">
+            maps
+                <div class="search-box2">
+                    <input type="text" placeholder="Search for location" class="search-city">
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                </div>
+            </div>
+
+
+    <div class="side-bar">
+
+    <div class="top-icon">
+
+        <div class="menu-item menu-button">
+            <i class="fa-solid fa-bars menu-icon"></i>
+            <span>Menu</span>
+        </div>
+
+        <div class="menu-item" data-page="forecast.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Forecast</span>
+        </div>
+
+        <div class="menu-item" data-page="map.html">
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+            <span>Maps</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-clock"></i>
+            <span>Hourly Forecast</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Monthly Forecast</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-map"></i>
+            <span>Life</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-star"></i>
+            <span>Favourites</span>
+        </div>
+
+    </div>
+    <div class="bottom-icon">
+
+        <div class="menu-item">
+            <i class="fa-solid fa-user"></i>
+            <span>Sign in</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-solid fa-gear settings"></i>
+            <span>Settings</span>
+        </div>
+
+    </div>
+
+</div>   
+
+<div class="weather-maps">
+    <iframe src="https://embed.ventusky.com/?p=28.6;71.8;5&l=temperature-2m"></iframe>
+</div>
+<script src="map.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="header-title">
+            Weather
+        </div>
+
+        <div class="top-navbar">
+            Forecast
+            <div class="right-side">
+                <i class="fa-solid fa-rotate-right"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-solid fa-thumbtack"></i>
+                <i class="fa-solid fa-sun"></i>
+
+                <div class="search-box1">
+                    <input type="text" placeholder="Search for location" class="search-city">
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="side-bar">
+
+    <div class="top-icon">
+
+        <div class="menu-item menu-button">
+            <i class="fa-solid fa-bars menu-icon"></i>
+            <span>Menu</span>
+        </div>
+
+        <div class="menu-item" data-page="forecast.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Forecast</span>
+        </div>
+
+        <div class="menu-item" data-page="map.html">
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+            <span>Maps</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-clock"></i>
+            <span>Hourly Forecast</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Monthly Forecast</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-map"></i>
+            <span>Life</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-regular fa-star"></i>
+            <span>Favourites</span>
+        </div>
+
+    </div>
+
+    <div class="bottom-icon">
+
+        <div class="menu-item">
+            <i class="fa-solid fa-user"></i>
+            <span>Sign in</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-solid fa-gear settings"></i>
+            <span>Settings</span>
+        </div>
+
+    </div>
+
+</div>
+        <div class="city-weather-bar">
+            <div class="city-card" data-city="Delhi"></div>
+            <div class="city-card" data-city="Mumbai"></div>
+            <div class="city-card" data-city="Hyderabad"></div>
+            <div class="city-card" data-city="Bengaluru"> </div>
+            <div class="city-card" data-city="Kolkata"></div>
+        </div>
+    </header>
+
+
+    <div class="weather-sec">
+
+        <div class="weather-container">
+            <i class="fa-solid fa-house"></i>
+            <p id="city-name"></p>
+
+            <div class="current-weather-card">
+                <div class="weather-main">
+                    <div class="weather-header">Current Weather</div>
+                    <div class="weather-time"></div>
+                    <div class="current-weather">
+                        <img src="img/weather.png" class="temp-img">
+                        <div class="temperature"></div>
+                        <div class="weather-condition"></div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail">
+                            <div class="detail-label">Air quality</div>
+                            <div class="detail-value" id="air-quality-value"></div>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">Wind</div>
+                            <div class="detail-value" id="wind-value"></div>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">Humidity</div>
+                            <div class="detail-value" id="humidity-value"></div>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">Feels Like</div>
+                            <div class="detail-value" id="feels-like-value"></div>
+                        </div>
+                    </div>
+
+                    <div class="other-details">
+                        <div class="detail">
+                            <div class="detail-label">Visibility</div>
+                            <div class="detail-value" id="visibility-value"></div>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">UV Index</div>
+                            <div class="detail-value" id="uv-value"></div>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">Pressure</div>
+                            <div class="detail-value" id="pressure-value"></div>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">Dew Point</div>
+                            <div class="detail-value" id="dewpoint-value"></div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="weather-map">
+                <iframe src="https://embed.ventusky.com/?p=28.6;71.8;5&l=temperature-2m"></iframe>
+            </div>
+
+        </div>
+        <div class="weather-tab-sec">
+
+
+            <div class="weather-tabs">
+                <h2>Hourly</h2>
+                <button class="tab" data-target="overview">
+                    Overview
+                </button>
+
+                <button class="tab" data-target="precipitation">
+                    Precipitation
+                </button>
+
+                <button class="tab" data-target="wind">
+                    Wind
+                </button>
+
+                <button class="tab" data-target="air-quality">
+                    Air Quality
+                </button>
+
+                <button class="tab" data-target="humidity">
+                    Humidity
+                </button>
+
+                <button class="tab" data-target="cloud-cover">
+                    Cloud cover
+                </button>
+
+            </div>
+
+            <div class="tab-content">
+
+                <section class="content" id="overview">
+                    <div class="forecast-container"></div>
+                </section>
+
+                <section class="content" id="precipitation">
+                    <div class="precipitation-container"></div>
+                </section>
+                <section class="content" id="wind">
+                    <div class="wind-container"></div>
+                </section>
+                <section class="content" id="air-quality">
+                    <div class="air-container"></div>
+                </section>
+                <section class="content" id="humidity">
+                    <div class="humidity-container"></div>
+                </section>
+                <section class="content" id="cloud-cover">
+                    <div class="cloud-container"></div>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
